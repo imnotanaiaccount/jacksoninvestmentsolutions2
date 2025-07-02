@@ -1,4 +1,2 @@
-  /contact 200
-  /old-path  /new-path  301
-  /something/*  /other/:splat  302
-  /git*  404
+/contact    /index.html   200
+/.git/*     404!
