@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Investment Solutions - Buy & Sell Homes in West Michigan</title>
+    <meta name="description" content="Looking to buy or sell a home in Michigan? Jackson Investment Solutions offers cash offers for sellers, expert Realtor® listings, and personalized home financing solutions for buyers.">
+    <link rel="icon" type="image/png" href="images/favico.png">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+        img-src 'self' data: https://www.googletagmanager.com;
+        connect-src 'self' https://*.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms;
+        frame-src 'self' https://www.google.com/recaptcha/ https://recaptcha.google.com/;">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <style>
+        /* Custom overrides for centering and styling */
+        .realtor-photo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* Shift image down within the circle so the full head is visible */
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        /* Modernized "Contact Us" section */
+        #contact.lead-form-section {
+            background: linear-gradient(135deg, #eaf4ff 0%, #ffffff 100%);
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative floating blobs */
+        #contact.lead-form-section::before,
+        #contact.lead-form-section::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 123, 255, 0.07);
+            z-index: 0;
+            animation: float 12s infinite ease-in-out;
+        }
+        #contact.lead-form-section::before {
+            width: 320px;
+            height: 320px;
+            top: -120px;
+            left: -140px;
+        }
+        #contact.lead-form-section::after {
+            width: 220px;
+            height: 220px;
+            bottom: -90px;
+            right: -70px;
+            animation-delay: 3s;
+        }
+        @keyframes float {
+            0%   { transform: translateY(0px) rotate(0deg); }
+            50%  { transform: translateY(20px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
+
+        /* Elevated form card */
+        #contact .form-container {
+            position: relative;
+            z-index: 1;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.07);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        #contact .form-container:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 35px 60px rgba(0,0,0,0.1);
+        }
+        #contact .form-container .submit-btn {
+            max-width: 300px;
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX'); // IMPORTANT: Replace with your actual GA4 Measurement ID (e.g., G-ABC1234567)
+
+        // Form submission and analytics are now handled by js/app.js
+    </script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "YOUR_ACTUAL_CLARITY_PROJECT_ID"); // IMPORTANT: Replace with your actual Microsoft Clarity Project ID
+    </script>
+
+    <meta name="geo.region" content="US-MI">
+    <meta name="geo.placename" content="Grand Rapids, West Michigan">
+    <meta name="geo.position" content="42.9634;-85.6681">
+    <meta name="ICBM" content="42.9634, -85.6681">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jackson Investment Solutions - Buy & Sell Homes in West Michigan">
+    <meta property="og:description" content="Looking to buy or sell a home in Michigan? Jackson Investment Solutions offers cash offers for sellers, expert Realtor® listings, and personalized home financing solutions for buyers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jacksoninvestmentsolutions.com/">
+    <meta property="og:image" content="https://jacksoninvestmentsolutions.com/images/jimmie.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jackson Investment Solutions - Buy & Sell Homes in West Michigan">
+    <meta name="twitter:description" content="Looking to buy or sell a home in Michigan? Jackson Investment Solutions offers cash offers for sellers, expert Realtor® listings, and personalized home financing solutions for buyers.">
+    <meta name="twitter:image" content="https://jacksoninvestmentsolutions.com/images/jimmie.jpg">
+    <meta name="twitter:site" content="@JacksonInvestments">
+    <!-- Structured Data: LocalBusiness/RealEstateAgent -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["RealEstateAgent", "LocalBusiness"],
+      "name": "Jackson Investment Solutions",
+      "image": "https://jacksoninvestmentsolutions.com/images/jimmie.jpg",
+      "@id": "https://jacksoninvestmentsolutions.com/",
+      "url": "https://jacksoninvestmentsolutions.com/",
+      "telephone": "+1-616-320-1722",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main Street",
+        "addressLocality": "Grand Rapids",
+        "addressRegion": "MI",
+        "postalCode": "49503",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.9634,
+        "longitude": -85.6681
+      },
+      "areaServed": ["Grand Rapids", "West Michigan", "Michigan"],
+      "description": "Looking to buy or sell a home in Michigan? Jackson Investment Solutions offers cash offers for sellers, expert Realtor® listings, and personalized home financing solutions for buyers.",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-616-320-1722",
+        "contactType": "customer service",
+        "areaServed": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/JacksonInvestmentSolutions",
+        "https://www.instagram.com/jacksoninvestmentsolutions",
+        "https://www.linkedin.com/in/jimmie-jackson-b12270a6"
+      ]
+    }
+    </script>
+
+</head>
+<body>
+
+    <div id="messageModal" class="message-modal">
+        <div class="message-modal-content">
+            <h2 id="modalTitle">
+                <span id="modalIcon" class="modal-icon"></span>
+                <span id="modalTitleText"></span>
+            </h2>
+            <p id="modalMessage"></p>
+            <button id="modalCloseBtn" class="message-modal-btn">Done</button>
+        </div>
+    </div>
+    <div id="guideModal" class="message-modal">
+        <div class="message-modal-content">
+            <h2 id="guideModalTitle">
+                <span id="guideModalIcon" class="modal-icon success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                </span>
+                <span id="guideModalTitleText">Thank You! Your Guide is Ready</span>
+            </h2>
+            <p id="guideModalMessage">Your download will begin shortly. If it doesn't, <a id="guideModalFallbackLink" href="#" target="_blank" style="text-decoration: underline; color: var(--primary-blue);">click here to download it manually</a>.</p>
+            <button id="guideModalCloseBtn" class="message-modal-btn">Done</button>
+        </div>
+    </div>
+
+    <div id="mobileNav" class="mobile-nav-overlay">
+        <button id="closeBtn" class="close-btn" aria-label="Close navigation menu">&times;</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#financing-options">Financing</a></li>
+            <li><a href="#process">Selling Process</a></li>
+            <li><a href="#benefits">Selling Benefits</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#lead-magnet">Seller Guide</a></li>
+            <li><a href="#lead-magnet-buyer">Buyer Guide</a></li>
+        </ul>
+    </div>
+
+    <div class="fab-container">
+        <button class="fab-button fab-toggle-btn" aria-label="Open Floating Actions">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="fab-actions-group">
+            <a href="tel:+16163201722" class="fab-button fab-action-btn" title="Call Jimmie">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+            <a href="sms:+16163201722?&body=Hi%20Jimmie," class="fab-button fab-action-btn" title="Text Jimmie">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </a>
+            <a href="mailto:info@jacksoninvestmentsolutions.com" class="fab-button fab-action-btn" title="Email Us">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+        </div>
+    </div>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="#home">Jackson Investment Solutions</a></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#financing-options">Financing</a></li>
+                <li><a href="#process">Selling Process</a></li>
+                <li><a href="#benefits">Selling Benefits</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#lead-magnet">Home Seller Guide</a></li>
+                <li><a href="#lead-magnet-buyer">Home Buyer Guide</a></li>
+            </ul>
+            <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open navigation menu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width: 28px; height: 28px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+       <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content glass-hero-card" style="display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap;backdrop-filter:blur(12px);background:rgba(255,255,255,0.65);border-radius:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.10);padding:2.5rem 2rem 2.5rem 2rem;">
+                    <img src="images/jimmie.jpg" alt="Jimmie Jackson, your West Michigan Realtor and investor" class="hero-jimmie-photo" style="width:140px;height:140px;object-fit:cover;border-radius:50%;box-shadow:0 4px 24px rgba(0,123,255,0.10);border:4px solid #fff;flex-shrink:0;" width="140" height="140">
+                    <div style="flex:1;min-width:260px;">
+                        <h1 class="shiny-text" style="font-size:2.5rem;line-height:1.1;font-weight:800;">Buy & Sell Homes Your Way</h1>
+                        <p class="hero-subtitle" style="font-size:1.25rem;margin-top:0.5rem;">Cash Offers | Realtor® Listings | Financing</p>
+                        <div class="cta-group" style="margin-top:1.3rem;gap:1rem;display:flex;flex-wrap:wrap;">
+                            <a href="#contact" id="heroSellBtn" class="cta-btn cta-primary">Get My Free Cash Offer</a>
+                            <a href="#contact" id="heroFinanceBtn" class="cta-btn cta-secondary">See My Buying Options</a>
+                            <a href="#success-stories" class="cta-btn cta-secondary">See Success Stories</a>
+                        </div>
+                        <div class="hero-microcopy" style="margin-top:0.7rem;font-size:1.05rem;color:#3a3a3a;opacity:0.85;">
+                            <span style="display:inline-flex;align-items:center;gap:0.4em;">
+                                <a href="https://www.google.com/search?q=Jackson+Investment+Solutions+Grand+Rapids+reviews" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">
+                                    <img src="images/favico.png" alt="Google" style="height:1.3em;width:1.3em;vertical-align:middle;margin-right:0.2em;">
+                                    <span style="color:#f7b500;font-size:1.2em;vertical-align:middle;">★★★★★</span>
+                                    <span style="font-weight:600;color:#222;">4.9/5</span>
+                                    <span style="color:#666;font-weight:400;">(50+ reviews)</span>
+                                </a>
+                            </span>
+                            <span style="margin-left:1.2em;display:inline-block;font-style:italic;color:#007bff;">
+                                "Jimmie made selling our home so easy!" – Sarah M., Grand Rapids
+                            </span>
+                        </div>
+                        <div class="hero-features" style="margin-top:1.2rem;">
+                            <span class="feature-badge"><a href="#contact">✓ Cash Offers & Realtor® Listings</a></span>
+                            <span class="feature-badge"><a href="#financing-options">✓ Personalized Home Financing</a></span>
+                            <span class="feature-badge"><a href="#process">✓ Close On Your Timeline</a></span>
+                            <span class="feature-badge"><a href="#benefits">✓ Sell Any Condition, As-Is</a></span>
+                            <span class="feature-badge"><a href="#testimonials">✓ 24/7 Realtor® Support</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="financing-options" class="benefits fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Seamless Home Financing for Buyers</h2>
+                <p class="section-subtitle">Navigating the mortgage landscape can be complex. We connect you with trusted loan officers to make financing your home simple & stress-free.</p>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+                        </div>
+                        <h3>Fast & Easy Pre-Approval</h3>
+                        <p>Get pre-approved quickly to know your buying power and stand out to sellers. Our partners streamline the process with minimal hassle.</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
+                        </div>
+                        <h3>Diverse Loan Options</h3>
+                        <p>From FHA, VA, and Conventional loans to specialized programs, we connect you with experts who find the best rates and terms for your unique situation.</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.8.7 3.3 1.5 4.5 1 .8 1.5 2 1.5 3.5"/><path d="M9 18h6"/><path d="M10 22h4"/><path d="M10 18a2 2 0 1 1 4 0"/></svg>
+                        </div>
+                        <h3>Expert Guidance & Support</h3>
+                        <p>Get clear, honest advice every step of the way. Our network of loan officers demystifies the financing process, from credit checks to closing.</p>
+                    </div>
+                </div>
+                <div class="cta-group">
+                    <a href="#contact" class="cta-btn cta-primary">Start My Loan Pre-Approval</a>
+                    <a href="#contact" class="cta-btn cta-secondary">Talk to a Real Estate Agent</a>
+                </div>
+            </div>
+        </section>
+        <section id="process" class="process fade-in-section">
+          <div class="container">
+            <h2 class="section-title">Our Simple 3‑Step Home Selling Process</h2>
+            <p class="section-subtitle">No stress or waiting - instant clarity on your best selling path.</p>
+            <div class="process-steps">
+              <div class="step"><div class="step-number">1</div>
+                <h3>Tell Us About Your Property</h3>
+                <p>Share your goals and property details—whether you want cash fast or want to list it. We'll guide you.</p></div>
+              <div class="step"><div class="step-number">2</div>
+                <h3>Get a Custom Offer & Options</h3>
+                <p>Jimmie, licensed Realtor® & real-estate investor, will present a side-by-side comparison of a fair cash offer and a traditional listing option, tailored to your unique situation.</p></div>
+              <div class="step"><div class="step-number">3</div>
+                <h3>Choose What Works Best For You</h3>
+                <p>Sell as‑is, close in 7 days, or go the listing route. You stay in control—and walk away with clarity.</p></div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="lead-form-section">
+    <div class="contact-accent"></div>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="form-title">Contact Us</h2>
+                <p class="form-subtitle">Whether selling or buying, Jimmie will contact you within 24 hours.</p>
+                <form id="leadForm" class="lead-form" name="property-inquiry" method="POST" action="/.netlify/functions/submit-to-n8n" netlify-honeypot="bot-field-contact">
+                    <input type="hidden" name="form-name" value="property-inquiry">
+                    <input type="hidden" name="form-source" value="jackson-investment-website">
+                    <label class="hidden">
+                        Don't fill this out if you're human: <input name="bot-field-contact" />
+                    </label>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required-asterisk">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="John Doe" aria-required="true">
+                        <span class="error-message">Please enter your full name (first and last name).</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number <span class="required-asterisk">*</span></label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="(555) 123-4567" autocomplete="tel" aria-required="true">
+                        <span class="error-message">Please enter a valid 10-digit phone number.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address <span class="required-asterisk">*</span></label>
+                        <input type="email" id="emailAddress" name="emailAddress" required placeholder="you@example.com" autocomplete="email" aria-required="true">
+                        <span class="error-message">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="interestType">I'm interested in... <span class="required-asterisk">*</span></label>
+                        <select id="interestType" name="interestType" required aria-required="true">
+                            <option value="">Please select...</option>
+                            <option value="sell-cash">💰 Selling my home for cash</option>
+                            <option value="sell-list">🏠 Listing my home with a Realtor®</option>
+                            <option value="buy-financing">💳 Getting financed to buy a home</option>
+                            <option value="buy-agent">🤝 Working with an agent to buy a home</option>
+                            <option value="both">🔄 Both buying and selling</option>
+                            <option value="other">❓ Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="propertyAddress">Property Address</label>
+                        <input type="text" id="propertyAddress" name="propertyAddress" placeholder="123 Main St, City, State" autocomplete="street-address" class="google-places-autocomplete">
+                        <span class="error-message">Please enter the property address.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertySituation">What's your selling situation?</label>
+                        <select id="propertySituation" name="propertySituation">
+                            <option value="">Please select...</option>
+                            <option value="foreclosure">⚠️ Facing foreclosure</option>
+                            <option value="inherited">🏛️ Inherited property</option>
+                            <option value="divorce">💔 Going through divorce</option>
+                            <option value="relocation">📦 Need to relocate quickly</option>
+                            <option value="financial">💸 Financial hardship</option>
+                            <option value="repairs">🔧 Property needs major repairs</option>
+                            <option value="other">📝 Other situation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellTimeline">When do you need to sell?</label>
+                        <select id="sellTimeline" name="sellTimeline">
+                            <option value="">Select timeline...</option>
+                            <option value="immediately">🚨 Immediately (within 2 weeks)</option>
+                            <option value="30days">📅 Within 30 days</option>
+                            <option value="60days">🗓️ Within 60 days</option>
+                            <option value="90days">📆 Within 90 days</option>
+                            <option value="flexible">⏰ Timeline is flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Tell us more about your needs, timeline, or any specific requirements..." maxlength="500"></textarea>
+                        <div class="character-count">
+                            <span id="charCount">0</span>/500 characters
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group required">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                            <label for="privacyPolicy">I have read and agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> <span class="required-asterisk">*</span></label>
+                        </div>
+                        <span class="error-message">You must accept the Privacy Policy to continue.</span>
+                    </div>
+
+                    <div class="form-group checkbox-group required">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="termsOfUse" name="termsOfUse" required>
+                            <label for="termsOfUse">I agree to the <a href="terms-of-use.html" target="_blank">Terms of Use</a> <span class="required-asterisk">*</span></label>
+                        </div>
+                        <span class="error-message">You must accept the Terms of Use to continue.</span>
+                    </div>
+
+                    <button type="submit" class="submit-btn cta-btn-primary">
+                        <span>Contact Me</span>
+                    </button>
+
+                    <p class="privacy-notice">
+                        By submitting, you consent to being contacted about your real estate needs. Message frequency may vary. Message and data rates may apply. Reply STOP to opt-out.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+        <section id="benefits" class="benefits fade-in-section">
+            <div class="container">
+                <h2 class="section-title">The Benefits of a Direct Cash Sale</h2>
+                <p class="section-subtitle">Selling directly to us means avoiding the hassles and costs of a traditional sale. Here's how you benefit.</p>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucude-hourglass"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414-4.414A2 2 0 0 0 7 6.172V2"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414 4.414a2 2 0 0 0 .586 1.414V22"/></svg>
+                        </div>
+                        <h3>Sell in Days, Not Months</h3>
+                        <p>We close on your timeline, often in as little as one week.</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h12a2 2 0 0 1 0 4H5a2 2 0 0 0 0 4h12c1.1 0 2 .9 2 2v3a1 1 0 0 1-1 1H5a2 2 0 0 1 0-4h3"/><path d="M2 7h2m0 4h2m0 4h2"/></svg>
+                        </div>
+                        <h3>Keep More Cash</h3>
+                        <p>Pay zero agent commissions and no surprise fees. We even cover all standard closing costs.</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home-off"><path d="M10 22V8l7.2-6.4M2 10l8 7 1.2-1.08"/><path d="m2 2 20 20"/><path d="M19 14.8V10l-6-5.4"/></svg>
+                        </div>
+                        <h3>Sell Your House "As-Is"</h3>
+                        <p>Forget about making repairs or even cleaning. We buy your property in its current condition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="compare-options" class="benefits fade-in-section">
+            <div class="container">
+              <div class="cta-profile">
+                  <div class="glass-card">
+                      <img src="images/jimmie.jpg" alt="Jimmie Jackson - Professional Realtor in Grand Rapids, West Michigan" class="realtor-photo" />
+                      <h2 class="shiny-text">Jimmie Jackson</h2>
+                      <p class="subtitle">Your trusted Realtor® & investor - committed to helping you sell smart and buy with confidence.</p>
+                      <a href="#contact" class="contact-btn" aria-label="Contact Jimmie Jackson, Realtor in Grand Rapids, West Michigan">Contact Jimmie</a>
+                  </div>
+              </div>
+              <p class="section-subtitle">Whether speed, top dollar, or finding your dream home is your priority, we offer a comprehensive approach to meet your unique needs.</p>
+              <div class="benefits-grid">
+                <div class="benefit">
+                  <h3>Selling Your Home</h3>
+                  <ul>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Cash Offer: Quick close in as little as 7 days</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Sell your home "As-Is" (no repairs, no cleaning)</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> No agent commissions or fees (for cash offer)</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Realtor® Listing: Potentially higher sale price</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Expert negotiation on your behalf (for listings)</li>
+                  </ul>
+                </div>
+                <div class="benefit">
+                  <h3>Buying Your Home</h3>
+                  <ul>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Loan Officer Connection: Personalized financing solutions</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Mortgage pre-approvals to strengthen your offer</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Guidance on FHA, VA, Conventional, and other loans</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>Real Estate Agent Support: Home search assistance</li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg> Expert guidance through inspections & appraisals</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section id="why-us" class="benefits fade-in-section">
+          <div class="container">
+            <h2 class="section-title">Why Choose Jackson Investment Solutions?</h2>
+            <p class="section-subtitle">Jimmie is a licensed Realtor®, and local investor who connects you to the best financing solutions - offering you unparalleled options for buying or selling.</p>
+            <div class="benefits-grid">
+              <div class="benefit"><div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.8.7 3.3 1.5 4.5 1 .8 1.5 2 1.5 3.5"/><path d="M9 18h6"/><path d="M10 22h4"/><path d="M10 18a2 2 0 1 1 4 0"/></svg>
+              </div>
+                <h3>Dual Expertise: Realtor® & Investor</h3>
+                <p>You're not stuck choosing between a cash buyer and an agent - Jimmie will show you your options and help you decide what's best for you.</p></div>
+              <div class="benefit"><div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake"><path d="m11 17 2 2 4-4"/><path d="m5 12 2 2 4-4"/><path d="M7 19H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5"/></svg>
+              </div>
+                <h3>Comprehensive Solutions</h3>
+                <p>From selling quickly for cash to finding the right loan and home to buy, we simplify your entire real estate journey with integrated services.</p></div>
+              <div class="benefit"><div class="benefit-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M12 8v4"/><path d="M12 12h-2"/><path d="M12 12h2"/><path d="M16 16v-2"/><path d="M8 16v-2"/></svg>
+              </div>
+                <h3>Powerful Local Network</h3>
+                <p>Access Jimmie's network of Realtors®, professional private buyers, contractors, and essential lender relationships. We provide you with the entire playbook to achieve your real estate goals!</p></div>
+            </div>
+          </div>
+        </section>
+        <section id="success-stories" class="gallery-section fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Success Stories: Before & After</h2>
+                <p class="section-subtitle">Real results for real people. See how Jimmie Jackson transforms homes and helps clients achieve their real estate goals in West Michigan.</p>
+                <div class="gallery-grid">
+                    <!-- Before/After Pair 1 -->
+                    <div class="gallery-card">
+                        <div class="before-after-pair">
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/755.png" class="gallery-img" alt="Home exterior, Grand Rapids, MI" loading="lazy" tabindex="0" data-gallery-caption="Home exterior, Grand Rapids, MI" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/756.png" class="gallery-img" alt="Modernized home exterior by Jimmie Jackson, Grand Rapids, MI" loading="lazy" tabindex="0" data-gallery-caption="Modernized home exterior by Jimmie Jackson, Grand Rapids, MI" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery-caption">Grand Rapids, MI: Complete exterior transformation for a fast, profitable sale.</div>
+                    </div>
+                    <!-- Before/After Pair 2 -->
+                    <div class="gallery-card">
+                        <div class="before-after-pair">
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/757.png" class="gallery-img" alt="Bedrooms, West Michigan home" loading="lazy" tabindex="0" data-gallery-caption="Kitchen, West Michigan home" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/758.png" class="gallery-img" alt="Renovated bedrooms by Jackson Investment Solutions, West Michigan" loading="lazy" tabindex="0" data-gallery-caption="Renovated kitchen by Jackson Investment Solutions, West Michigan" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery-caption">West Michigan: Bedroom renovations increased value and buyer appeal.</div>
+                    </div>
+                    <!-- Before/After Pair 3 -->
+                    <div class="gallery-card">
+                        <div class="before-after-pair">
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/759.png" class="gallery-img" alt="Home curb appeal, Grand Rapids MI" loading="lazy" tabindex="0" data-gallery-caption="Home curb appeal, Grand Rapids MI" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/760.png" class="gallery-img" alt="Kitchen & office space renovations by Jimmie Jackson, Grand Rapids MI" loading="lazy" tabindex="0" data-gallery-caption="Enhanced curb appeal by Jimmie Jackson, Grand Rapids MI" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery-caption">Grand Rapids, MI: Kitchen & office space renovations led to a quick sale.</div>
+                    </div>
+                    <!-- Before/After Pair 4 -->
+                    <div class="gallery-card">
+                        <div class="before-after-pair">
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/761.png" class="gallery-img" alt="Living room, West Michigan" loading="lazy" tabindex="0" data-gallery-caption="Living room, West Michigan" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                            <figure style="margin:0;">
+                                <img src="images/client-photos/762.png" class="gallery-img" alt="Modern living room by Jackson Investment Solutions, West Michigan" loading="lazy" tabindex="0" data-gallery-caption="Modern living room by Jackson Investment Solutions, West Michigan" width="320" height="240">
+                                <figcaption class="gallery-label" aria-label="Project photo"></figcaption>
+                            </figure>
+                        </div>
+                        <div class="gallery-caption">West Michigan: Living room makeover</div>
+                    </div>
+                    <!-- Client Moment / Single Hero Card -->
+                    <div class="gallery-card">
+                        <figure style="margin:0; position:relative;">
+                            <img src="images/client-photos/762.png" class="gallery-img" alt="Jimmie Jackson with happy clients after successful home sale in West Michigan" loading="lazy" tabindex="0" data-gallery-caption="Jimmie Jackson with happy clients after successful home sale in West Michigan. 'Jimmie made the process so easy and stress-free. We sold above asking and felt supported every step of the way!' - The Smith Family (placeholder)" width="320" height="240">
+                            
+                        </figure>
+                        <div class="gallery-caption">Jimmie Jackson with happy clients after a successful home sale in West Michigan.</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:2.5rem;">
+                <a href="gallery.html" class="cta-btn cta-primary" style="font-size:1.15rem; padding:0.9em 2.2em;">See All Success Stories</a>
+            </div>
+            <!-- Lightbox Modal -->
+            <div class="gallery-lightbox" id="galleryLightbox" aria-modal="true" role="dialog" tabindex="-1">
+                <button class="gallery-lightbox-close" id="galleryLightboxClose" aria-label="Close gallery lightbox">&times;</button>
+                <img class="gallery-lightbox-img" id="galleryLightboxImg" src="" alt="">
+                <div class="gallery-lightbox-caption" id="galleryLightboxCaption"></div>
+            </div>
+            <script>
+                // Premium Gallery Lightbox JS
+                document.addEventListener('DOMContentLoaded', function() {
+                    const galleryImgs = document.querySelectorAll('.gallery-img');
+                    const lightbox = document.getElementById('galleryLightbox');
+                    const lightboxImg = document.getElementById('galleryLightboxImg');
+                    const lightboxCaption = document.getElementById('galleryLightboxCaption');
+                    const lightboxClose = document.getElementById('galleryLightboxClose');
+                    galleryImgs.forEach(img => {
+                        img.addEventListener('click', function() {
+                            lightboxImg.src = this.src;
+                            lightboxImg.alt = this.alt;
+                            lightboxCaption.textContent = this.getAttribute('data-gallery-caption') || this.alt;
+                            lightbox.classList.add('active');
+                            lightbox.focus();
+                        });
+                        img.addEventListener('keydown', function(e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                this.click();
+                            }
+                        });
+                    });
+                    lightboxClose.addEventListener('click', function() {
+                        lightbox.classList.remove('active');
+                        lightboxImg.src = '';
+                        lightboxImg.alt = '';
+                        lightboxCaption.textContent = '';
+                    });
+                    lightbox.addEventListener('click', function(e) {
+                        if (e.target === lightbox) {
+                            lightboxClose.click();
+                        }
+                    });
+                    document.addEventListener('keydown', function(e) {
+                        if (lightbox.classList.contains('active') && (e.key === 'Escape' || e.key === 'Esc')) {
+                            lightboxClose.click();
+                        }
+                    });
+                });
+            </script>
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ImageGallery",
+              "name": "Success Stories Gallery - Jackson Investment Solutions",
+              "description": "Before and after photos, and client success moments with Jimmie Jackson in Grand Rapids and West Michigan.",
+              "url": "https://jacksoninvestmentsolutions.com/#success-stories",
+              "image": [
+                "https://jacksoninvestmentsolutions.com/images/client-photos/755.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/756.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/757.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/758.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/759.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/760.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/761.png",
+                "https://jacksoninvestmentsolutions.com/images/client-photos/762.png",
+              ]
+            }
+            </script>
+        </section>
+        <section id="lead-magnet" class="lead-magnet-section fade-in-section bg-subtle">
+            <div class="container">
+                <h2 class="section-title">Home Seller's Guide</h2>
+                <p class="section-subtitle">Realtor® & investor tips & proven strategies for a smooth, profitable sale.</p>
+                <div class="form-container">
+                    <form id="sellerGuideForm" class="lead-magnet-form" name="seller-guide-download" method="POST" action="/.netlify/functions/submit-to-n8n" netlify-honeypot="bot-field-seller">
+                        <input type="hidden" name="form-name" value="seller-guide-download">
+                        <label class="hidden">
+                            Don't fill this out if you're human: <input name="bot-field-seller" />
+                        </label>
+                        <div class="form-group full-width">
+                            <label for="sellerGuideEmail">Your Email Address *</label>
+                            <input type="email" id="sellerGuideEmail" name="email" required placeholder="your.email@example.com" aria-required="true">
+                            <span class="error-message">Please enter a valid email address.</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn cta-btn-primary">Download Seller's Guide</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="lead-magnet-buyer" class="lead-magnet-section fade-in-section bg-subtle">
+            <div class="container">
+                <h2 class="section-title">Home Buyer's Guide</h2>
+                <p class="section-subtitle">Realtor® & investor tips & proven strategies for a smooth, profitable purchase.</p>
+                <div class="form-container">
+                    <form id="buyerGuideForm" class="lead-magnet-form" name="buyer-guide-download" method="POST" action="/.netlify/functions/submit-to-n8n" netlify-honeypot="bot-field-buyer">
+                        <input type="hidden" name="form-name" value="buyer-guide-download">
+                        <label class="hidden">
+                            Don't fill this out if you're human: <input name="bot-field-buyer" />
+                        </label>
+                        <div class="form-group full-width">
+                            <label for="buyerGuideEmail">Your Email Address *</label>
+                            <input type="email" id="buyerGuideEmail" name="email" required placeholder="your.email@example.com" aria-required="true">
+                            <span class="error-message">Please enter a valid email address.</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn cta-btn-primary">Download Buyer's Guide</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Jackson Investment Solutions</h3>
+                    <p>Connecting homebuyers and sellers with tailored solutions in West Michigan.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/JacksonInvestmentSolutions" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jacksoninvestmentsolutions" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jimmie-jackson-b12270a6" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#financing-options">Financing</a></li>
+                        <li><a href="#process">Selling Process</a></li>
+                        <li><a href="#benefits">Selling Benefits</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#lead-magnet">Seller Guide</a></li>
+                        <li><a href="#lead-magnet-buyer">Buyer Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p><a href="tel:+16163201722"><i class="fas fa-phone"></i> (616) 320-1722</a></p>
+                    <p><a href="mailto:info@jacksoninvestmentsolutions.com"><i class="fas fa-envelope"></i> info@jacksoninvestmentsolutions.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> West Michigan, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Jackson Investment Solutions. All rights reserved.</p>
+                <p><a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Main JavaScript Files -->
+    <script src="js/app.js" type="application/javascript"></script>
+    <script src="js/animations.js" type="application/javascript" async></script>
+    
+    <!-- Cookie Consent -->
+    <script src="js/cookie-consent.js" type="application/javascript"></script>
+    
+    <!-- Form Validation -->
+    <script src="js/form-validation.js" type="application/javascript"></script>
+    
+    <!-- Current Year Update -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
