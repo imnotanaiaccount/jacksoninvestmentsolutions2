@@ -1,0 +1,12 @@
+/* /index.html 200
+
+# Security headers for specific paths
+/contact 200
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geomocation=(), microphone=(), camera=()
+
+# Prevent access to sensitive files
+/.git* 404 -
